@@ -1,11 +1,20 @@
-public class Legendario{
+public class Legendario extends Brawler {
+    private int damage;
 
-    private final String nombre;
-    private int vida;
-    private final int potencia = 1000;
+    public Legendario(String name, int health, int damage) {
+        super(name, health);
+        this.damage = damage;
+    }
+    @Override
+    public void actionByCategory(Brawler target) {
+        target.reduceHealth(damage);
+        System.out.println(getName() + " hits " + target.getName() + " for " + damage);
+    }
 
-    public Legendario(String nombre, int vida){
-        this.nombre = nombre;
-        this.vida = vida;
+    @Override
+    public String toString() {
+        return "[Legendary] " + super.toString() + " | Damage: " + damage;
     }
 }
+
+
