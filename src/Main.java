@@ -13,7 +13,7 @@ public class Main {
             System.out.println("2. Exit");
             System.out.println();
             option = readInt("Option: ");
-
+            
             switch (option) {
                 case 1 -> login();
                 case 2 -> System.out.println("Bye");
