@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Main {
 
+
+
     public static int readInt(String message){
         Scanner scanner = new Scanner(System.in);
         System.out.println(message);
